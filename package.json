@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
@@ -12,6 +13,14 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@vendure/admin-ui-plugin": "2.0.0-next.15",
+    "@vendure/asset-server-plugin": "2.0.0-next.15",
+    "@vendure/core": "2.0.0-next.15",
+    "@vendure/email-plugin": "2.0.0-next.15",
+    "@vendure/job-queue-plugin": "2.0.0-next.15",
+    "@vendure/ui-devkit": "2.0.0-next.15",
+    "graphql": "15.0.0",
+    "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0"
@@ -30,6 +39,7 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
+    "dotenv": "16.0.2",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "jest": "28.1.1",
@@ -38,6 +48,6 @@
     "prettier": "^2.6.2",
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "~4.8.2"
+    "typescript": "~4.5.5"
   }
 }
