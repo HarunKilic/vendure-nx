@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev:server": "ts-node --project tsconfig.app.json ./src/index.ts",
+    "dev:worker": "ts-node ./src/index-worker.ts",
+    "dev": "concurrently yarn:dev:*",
+    "build": "tsc",
+    "start:server": "node ./dist/index.js",
+    "start:worker": "node ./dist/index-worker.js",
+    "start": "concurrently yarn:start:*",
+    "migration:generate": "ts-node migration generate",
+    "migration:run": "ts-node migration run",
+    "migration:revert": "ts-node migration revert"
+  },
+  "dependencies": {
+    "@vendure/admin-ui-plugin": "2.0.0-next.15",
+    "@vendure/asset-server-plugin": "2.0.0-next.15",
+    "@vendure/core": "2.0.0-next.15",
+    "@vendure/email-plugin": "2.0.0-next.15",
+    "pg": "8.8.0",
+    "typescript": "4.3.5"
+  },
+  "devDependencies": {
+    "concurrently": "7.4.0",
+    "dotenv": "16.0.2",
+    "ts-node": "10.9.1"
+  }
+}

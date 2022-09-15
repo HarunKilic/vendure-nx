@@ -1,6 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
+  "cli": {
+    "packageManager": "yarn"
+  },
   "projects": {
     "api": "apps/api"
   }

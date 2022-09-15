@@ -2,32 +2,20 @@
   "name": "novusstore",
   "version": "0.0.0",
   "license": "MIT",
+  "workspaces": {
+    "packages": ["apps/api"],
+    "nohoist": ["vendure/**", "**/vendure/**"]
+  },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
   },
   "private": true,
   "dependencies": {
-    "@nestjs/common": "^9.0.0",
-    "@nestjs/core": "^9.0.0",
-    "@nestjs/platform-express": "^9.0.0",
-    "@vendure/admin-ui-plugin": "2.0.0-next.15",
-    "@vendure/asset-server-plugin": "2.0.0-next.15",
-    "@vendure/core": "2.0.0-next.15",
-    "@vendure/email-plugin": "2.0.0-next.15",
-    "@vendure/job-queue-plugin": "2.0.0-next.15",
-    "@vendure/ui-devkit": "2.0.0-next.15",
-    "graphql": "15.0.0",
-    "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.0.0",
-    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@nestjs/schematics": "^9.0.0",
-    "@nestjs/testing": "^9.0.0",
     "@nrwl/cli": "14.7.5",
     "@nrwl/eslint-plugin-nx": "14.7.5",
     "@nrwl/jest": "14.7.5",
