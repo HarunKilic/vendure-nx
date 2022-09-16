@@ -11,8 +11,18 @@
     "target": "es2019",
     "strict": true,
     "sourceMap": false,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],
-  "include": ["**/*.ts"]
+  "exclude": [
+    "jest.config.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    'migration.ts',
+    'node_modules'
+  ],
+  "include": [
+    "**/*.ts"
+  ]
 }
+
+

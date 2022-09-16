@@ -35,5 +35,8 @@
     ],
     "sharedGlobals": []
   },
-  "defaultProject": "api"
+  "defaultProject": "api",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }

@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "workspaces": {
-    "packages": ["apps/api"],
-    "nohoist": ["vendure/**", "**/vendure/**"]
+    "packages": [
+      "apps/api"
+    ],
+    "nohoist": [
+      "api/**",
+      "**/api/**"
+    ]
   },
   "scripts": {
     "start": "nx serve",
@@ -14,11 +19,13 @@
   "private": true,
   "dependencies": {
     "reflect-metadata": "^0.1.13",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@nrwl/cli": "14.7.5",
     "@nrwl/eslint-plugin-nx": "14.7.5",
     "@nrwl/jest": "14.7.5",
+    "@nrwl/js": "14.7.5",
     "@nrwl/linter": "14.7.5",
     "@nrwl/nest": "14.7.5",
     "@nrwl/node": "14.7.5",
@@ -30,6 +37,7 @@
     "dotenv": "16.0.2",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "nx": "14.7.5",
