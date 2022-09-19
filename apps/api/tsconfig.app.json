@@ -17,8 +17,8 @@
     "jest.config.ts",
     "**/*.spec.ts",
     "**/*.test.ts",
-    'migration.ts',
-    'node_modules'
+    "migration.ts",
+    "node_modules"
   ],
   "include": [
     "**/*.ts"

@@ -1,4 +1,13 @@
 {
   "name": "@novusstore/random-cat",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "@vendure/admin-ui": "2.0.0-next.16",
+    "@vendure/admin-ui-plugin": "2.0.0-next.16",
+    "@vendure/asset-server-plugin": "2.0.0-next.16",
+    "@vendure/core": "2.0.0-next.16",
+    "@vendure/create": "2.0.0-next.16",
+    "@vendure/testing": "2.0.0-next.16",
+    "@vendure/ui-devkit": "2.0.0-next.16"
+  }
 }

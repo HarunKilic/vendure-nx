@@ -1,1 +1,1 @@
-export * from './lib/random-cat';
+export * from './lib/random-cat.plugin';

@@ -4,7 +4,8 @@
   "license": "MIT",
   "workspaces": {
     "packages": [
-      "apps/api"
+      "apps/api",
+      "libs/random-cat"
     ],
     "nohoist": [
       "api/**",
@@ -12,6 +13,7 @@
     ]
   },
   "scripts": {
+    "start:api": "yarn workspace api dev:server",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"

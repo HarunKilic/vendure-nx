@@ -1,7 +1,13 @@
-import {AdminUiPlugin} from '@vendure/admin-ui-plugin';
-import {AssetServerPlugin} from '@vendure/asset-server-plugin';
-import {DefaultJobQueuePlugin, DefaultSearchPlugin, dummyPaymentHandler, VendureConfig,} from '@vendure/core';
-import {defaultEmailHandlers, EmailPlugin} from '@vendure/email-plugin';
+import { RandomCatPlugin } from '@novusstore/random-cat';
+import { AdminUiPlugin } from '@vendure/admin-ui-plugin';
+import { AssetServerPlugin } from '@vendure/asset-server-plugin';
+import {
+  DefaultJobQueuePlugin,
+  DefaultSearchPlugin,
+  dummyPaymentHandler,
+  VendureConfig,
+} from '@vendure/core';
+import { defaultEmailHandlers, EmailPlugin } from '@vendure/email-plugin';
 import 'dotenv/config';
 import path from 'path';
 
@@ -17,15 +23,15 @@ export const config: VendureConfig = {
     // reasons.
     ...(IS_DEV
       ? {
-        adminApiPlayground: {
-          settings: {'request.credentials': 'include'} as any,
-        },
-        adminApiDebug: true,
-        shopApiPlayground: {
-          settings: {'request.credentials': 'include'} as any,
-        },
-        shopApiDebug: true,
-      }
+          adminApiPlayground: {
+            settings: { 'request.credentials': 'include' } as any,
+          },
+          adminApiDebug: true,
+          shopApiPlayground: {
+            settings: { 'request.credentials': 'include' } as any,
+          },
+          shopApiDebug: true,
+        }
       : {}),
   },
   authOptions: {
@@ -59,12 +65,13 @@ export const config: VendureConfig = {
   // need to be updated. See the "Migrations" section in README.md.
   customFields: {},
   plugins: [
+    RandomCatPlugin,
     AssetServerPlugin.init({
       route: 'assets',
       assetUploadDir: path.join(__dirname, '../static/assets'),
     }),
-    DefaultJobQueuePlugin.init({useDatabaseForBuffer: true}),
-    DefaultSearchPlugin.init({bufferUpdates: false, indexStockStatus: true}),
+    DefaultJobQueuePlugin.init({ useDatabaseForBuffer: true }),
+    DefaultSearchPlugin.init({ bufferUpdates: false, indexStockStatus: true }),
     EmailPlugin.init({
       devMode: true,
       outputPath: path.join(__dirname, '../static/email/test-emails'),
